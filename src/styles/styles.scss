@@ -1,6 +1,9 @@
 // Base
 @import "./base/base";
 @import "./base/settings";
+@import "./base/nav";
+
+// Experimento
 
 // Pages
 @import "./pages/home";
@@ -10,7 +13,8 @@
 
 // UI
 @import "./components/paymentMethodsInfo";
-@import "./components/nav";
+@import "./components/nav/navDesktop";
+@import "./components/nav/navMobile";
 @import "./components/searchInput";
 @import "./components/footer";
 @import "./components/shoppingInfo";
