@@ -1,5 +1,5 @@
 .gallery-ctn {
-  max-width: 1100px;
+  max-width: 1200px;
   height: 500px;
   margin: 50px auto;
   font-family: Proxima Nova, -apple-system, Helvetica Neue, Helvetica, Roboto,
@@ -7,14 +7,18 @@
 }
 
 .gallery-items-ctn {
+  display: flex;
+}
+.gallery-items {
   position: relative;
   display: flex;
   justify-content: space-between;
+  overflow: hidden;
 }
 
 .gallery-item-next {
   display: none;
-  position: absolute;
+  position: relative;
   top: 145px;
   right: 0;
   transform: translate(50%, -50%);
@@ -33,4 +37,14 @@
 
 .gallery-items-ctn:hover > button {
   display: flex;
+}
+
+.gallery-items > a:not(:last-child) {
+  margin: 0 5px;
+}
+
+@media only screen and (max-width: 1100px) {
+  button.gallery-item-next {
+    right: 30px;
+  }
 }
