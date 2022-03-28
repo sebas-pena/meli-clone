@@ -1,251 +1,65 @@
-@import "../components/products-page/product-display";
-
+@import "../components/products-page/productDisplay";
+@import "../components/products-page/sidebar/productSection";
+@import "../components/products-page/productTopLinks";
 .product-page {
-	background-color: #ededed;
-	font-family: "Proxima Nova", -apple-system, "Helvetica Neue", Helvetica,
-		Roboto, Arial, sans-serif;
+  background-color: #ededed;
+  font-family: "Proxima Nova", -apple-system, "Helvetica Neue", Helvetica,
+    Roboto, Arial, sans-serif;
 }
 .product-page__ctn {
-	max-width: 1200px;
-	margin: 0 auto;
-}
-
-.product-page {
-	.product__suggestions,
-	.product__categories {
-		display: flex;
-		font-size: 14px;
-		li:first-child,
-		li > a {
-			text-decoration: none;
-		}
-		li > a:first-child {
-			color: #000000e6;
-		}
-	}
-
-	.product__suggestions {
-		li > a {
-			color: #000000e6;
-		}
-
-		li:first-child {
-			margin-right: 10px;
-			font-weight: 600;
-		}
-		li:not(:first-child):not(:last-child)::after {
-			content: "-";
-			padding: 0 10px;
-		}
-	}
-
-	.product__categories {
-		li:not(:first-child) > a {
-			color: #3483fa;
-		}
-		li > a:hover {
-			color: #2968c8;
-		}
-
-		li:nth-last-of-type(2) {
-			flex-grow: 1;
-			text-align: end;
-		}
-		li.product__bar-divisor {
-			&::after {
-				content: "";
-				position: relative;
-				top: 3px;
-				display: inline-block;
-				height: 14px;
-				width: 1px;
-				margin: 0 15px;
-				background-color: #00000033;
-			}
-		}
-		li > img {
-			margin: 0 10px;
-		}
-	}
-}
-
-.product-page__top-links {
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	padding-top: 15px;
-	height: 70px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .product-screen {
-	display: flex;
-	width: 100%;
-	min-width: 300px;
-	background-color: #fff;
-	margin-top: 15px;
-	box-shadow: 0 1px 2px 0 #00000040;
-	border-radius: 4px;
+  display: flex;
+  width: 100%;
+  margin: 0 10px;
+  padding: 0 20px;
+  margin-top: 15px;
+  border-radius: 4px;
+  background-color: #fff;
+  box-shadow: 0 1px 2px 0 #00000040;
 }
 
 .product-screen > sidebar {
-	max-width: 400px;
-	h2 {
-		max-width: 290px;
-		font-size: 22px;
-		color: #000000e6;
-	}
-
-	.product-rating__ctn {
-		display: flex;
-		.product-rating__starts-ctn {
-			img {
-				margin-right: 3px;
-				height: 14px;
-				&:last-child {
-					margin-right: 9px;
-				}
-			}
-		}
-	}
-
-	p.product__amount,
-	p.product-rating__reviews-amount {
-		font-size: 14px;
-		color: #0000008c;
-	}
-
-	.product-price__ctn {
-		position: relative;
-		display: flex;
-		flex-direction: column;
-		font-size: 36px;
-		font-weight: 300;
-		color: #000000e6;
-	}
+  max-width: 400px;
 }
 
 //SIDEBAR SECTIONS
 .product-sidebar__sections {
-	margin-top: 20px;
-	margin-right: 10px;
-	padding: 20px 15px;
-	border: 1px solid #0000001a;
-	border-radius: 8px;
-}
-
-.product-sidebar__product-seciton {
-	.product-price {
-		display: flex;
-		span {
-			margin-right: 10px;
-		}
-	}
-
-	.product-price__installments {
-		font-size: 18px;
-
-		span:nth-child(2) {
-			color: #00a650;
-			font-weight: 500;
-		}
-	}
-	.product-sidebar__link {
-		font-size: 14px;
-		text-decoration: none;
-		font-weight: 600;
-		color: #3483fa;
-	}
-
-	.product-shipping-info {
-		display: flex;
-		align-items: baseline;
-		img {
-			position: relative;
-			top: 5px;
-		}
-		div {
-			display: flex;
-			flex-direction: column;
-			margin-left: 10px;
-			p {
-				font-size: 16px;
-				color: #2fb670;
-				span {
-					color: #00a650;
-					font-size: 16px;
-					font-weight: 600;
-				}
-			}
-			span {
-				font-size: 14px;
-				color: #737373;
-				.highlight-orange {
-					color: #f73;
-					font-weight: 600;
-				}
-			}
-		}
-	}
-
-	.product-variants {
-		margin-top: 40px;
-		.product-variants__list {
-			display: flex;
-			flex-direction: row;
-			margin-top: 5px;
-			li:not(:last-child) {
-				margin-right: 10px;
-			}
-		}
-	}
-	.product-buy-now,
-	.product-add-to-cart {
-		padding: 15px 0;
-		width: 100%;
-		border-radius: 8px;
-		border: none;
-		margin-top: 10px;
-		font-family: "Proxima Nova", -apple-system, "Helvetica Neue", Helvetica,
-			Roboto, Arial, sans-serif;
-		font-weight: 600;
-		font-size: 16px;
-	}
-	.product-buy-now {
-		background-color: #3483fa;
-		color: #e3edfb;
-	}
-	.product-add-to-cart {
-		color: #3483fa;
-		background-color: #e3edfb;
-	}
+  margin-top: 22px;
+  padding: 20px 15px;
+  border: 1px solid #0000001a;
+  border-radius: 8px;
 }
 
 //SCREEN DISPLAY
 .product-info-side {
-	flex-grow: 1;
-	display: flex;
+  flex-grow: 1;
+  display: flex;
 }
 .product-info-side__section {
-	flex-grow: 1;
-	display: flex;
+  flex-grow: 1;
+  display: flex;
 }
 
 li.product-image {
-	position: relative;
-	width: 44px;
-	height: 44px;
-	border: 2px solid #fff;
-	outline: 1px solid #00000033;
-	border-radius: 4px;
-	overflow: hidden;
-	cursor: pointer;
-	&:hover {
-		outline: 2px solid #2968c8;
-	}
-	img {
-		width: 100%;
-	}
-	&:not(:last-child) {
-		margin-bottom: 10px;
-	}
+  position: relative;
+  width: 44px;
+  height: 44px;
+  border: 2px solid #fff;
+  outline: 1px solid #00000033;
+  border-radius: 4px;
+  overflow: hidden;
+  cursor: pointer;
+  &:hover {
+    outline: 2px solid #2968c8;
+  }
+  img {
+    width: 100%;
+  }
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
 }

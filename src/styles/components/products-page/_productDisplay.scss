@@ -1,0 +1,15 @@
+.product-display {
+  .product-images {
+    padding-top: 20px;
+  }
+
+  .product-image-display {
+    flex-grow: 1;
+    display: grid;
+    place-content: center;
+    max-height: 500px;
+    img {
+      max-height: 400px;
+    }
+  }
+}
