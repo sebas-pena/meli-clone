@@ -1,11 +1,23 @@
 .Categories-Card-Gallery-ctn {
 	display: flex;
 	flex-direction: column;
-	max-width: 1100px;
+	max-width: 1200px;
+	padding: 0 10px;
 	margin: 0 auto;
 }
 
 .Categories-Card-Gallery {
-	display: flex;
+	display: grid;
+	grid-auto-flow: column;
+	grid-auto-columns: minmax(auto, 1fr);
+	column-gap: 10px;
 	justify-content: space-between;
+}
+
+@media only screen and (max-width: 850px) {
+	.Categories-Card-Gallery {
+		grid-auto-flow: row;
+		grid-auto-rows: minmax(auto, 1fr);
+		row-gap: 15px;
+	}
 }

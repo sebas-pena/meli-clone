@@ -1,8 +1,9 @@
 .category-card {
+	position: relative;
 	display: flex;
 	align-items: center;
 	height: 250px;
-	width: 49%;
+	width: 100%;
 	padding: 2px;
 	border-radius: 5px;
 	overflow: hidden;
@@ -13,9 +14,15 @@
 	&:hover {
 		box-shadow: 0px 6px 20px -1px #00000030;
 	}
+	* {
+		z-index: 2;
+	}
 }
 
 .category-card > img {
+	position: absolute;
+	right: 0;
+	z-index: 1;
 	height: 100%;
 }
 
@@ -45,7 +52,7 @@
 	margin-top: 15px;
 	border: none;
 	border-radius: 5px;
-	background-color: var(--SkyblueColor);
+	background-color: $SkyblueColor;
 	font-size: 14px;
 	font-weight: 600;
 	color: #fff;
@@ -53,4 +60,26 @@
 
 .category-card-btn:hover {
 	background-color: var(--BlueColor);
+}
+
+@media only screen and (max-width: 1000px) {
+	.category-card {
+		height: 190px;
+		align-items: baseline;
+	}
+	.category-card-title {
+		font-size: 10px;
+	}
+	.category-card-text-line {
+		font-size: 20px;
+		line-height: 22px;
+	}
+
+	.category-card-btn {
+		position: absolute;
+		bottom: 10px;
+		left: 2px;
+		color: $SkyblueColor;
+		background-color: #fff;
+	}
 }

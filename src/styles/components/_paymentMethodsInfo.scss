@@ -1,36 +1,63 @@
 .payment-methods-info {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 40px auto;
-  padding-right: 15px;
-  border-radius: 10px;
-  background-color: #fff;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
-  font-family: Proxima Nova, -apple-system, Helvetica Neue, Helvetica, Roboto,
-    Arial, sans-serif;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 40px auto;
+	padding-right: 15px;
+	border-radius: 10px;
+	background-color: #fff;
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
+	font-family: Proxima Nova, -apple-system, Helvetica Neue, Helvetica, Roboto,
+		Arial, sans-serif;
 }
 
 .payment-methods-info > li {
-  display: flex;
-  align-items: center;
-  height: 90px;
-  padding: 0 10px;
+	display: flex;
+	align-items: center;
+	height: 90px;
+	padding: 0 10px;
 }
 
 .payment-methods-info > li > img {
-  height: 48px;
-  margin: 0 15px;
-  cursor: pointer;
+	height: 48px;
+	margin: 0 15px;
+	cursor: pointer;
 }
 
 .payment-methods-info > li > div > a {
-  font-size: 13px;
-  color: #3483fa;
-  cursor: pointer;
+	font-size: 13px;
+	color: #3483fa;
+	cursor: pointer;
 }
 
 .payment-methods-info > li > div > a:hover {
-  color: #1259c3;
+	color: #1259c3;
+}
+
+@media only screen and (max-width: 1200px) {
+	.payment-methods-info {
+		margin: 30px 10px;
+		justify-content: space-evenly;
+	}
+	.payment-methods-info > li:nth-child(3) {
+		display: none;
+	}
+}
+
+@media only screen and (max-width: 800px) {
+	.payment-methods-info > li:nth-child(2) {
+		display: none;
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	.payment-methods-info {
+		margin: 30px 0;
+		border-radius: 0;
+		border: none;
+	}
+	.payment-methods-info > li:nth-child(4) {
+		display: none;
+	}
 }

@@ -2,9 +2,8 @@
 	position: relative;
 	display: flex;
 	flex-direction: column;
-	width: 350px;
+	min-width: 350px;
 	height: 340px;
-	margin: auto;
 	overflow: hidden;
 	border-radius: 5px;
 	background-color: #fff;
@@ -14,6 +13,9 @@
 	text-decoration: none;
 	&:hover {
 		box-shadow: 0px 6px 20px -1px #00000030;
+	}
+	&:not(:last-child) {
+		margin-right: 15px;
 	}
 }
 
@@ -60,4 +62,28 @@
 
 .store-card-ctn:hover > .store-card-info > .store-card-link {
 	color: #468efa;
+}
+
+@media only screen and (max-width: 1000px) {
+	.store-card-ctn {
+		height: 181px;
+	}
+	.store-card-banner {
+		min-height: 124px;
+	}
+	.store-card-logo {
+		position: absolute;
+		left: 30px;
+	}
+	.store-card-name {
+		position: relative;
+		top: 35px;
+		font-size: 16px;
+	}
+	.store-card-link {
+		display: none;
+	}
+	.store-card-products {
+		display: none;
+	}
 }

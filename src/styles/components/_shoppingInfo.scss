@@ -1,51 +1,99 @@
 .shopping-info__ctn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 350px;
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 350px;
+	overflow: hidden;
+}
+.shopping-info__section > h2 {
+	margin-top: 20px;
+	font-size: 20px;
+	font-weight: 500;
+	color: #4b4b4b;
 }
 .shopping-info__section > img {
-  display: block;
-  margin: auto;
+	display: block;
+	margin: auto;
 }
 
 .shopping-info__section > h2,
 .shopping-info__section > p,
 .shopping-info__section > a {
-  text-align: center;
-  font-family: "Proxima Nova", -apple-system, "Helvetica Neue", Helvetica,
-    Roboto, Arial, sans-serif;
-}
-
-.shopping-info__section > h2 {
-  margin-top: 20px;
-  font-size: 20px;
-  font-weight: 500;
-  color: #4b4b4b;
+	text-align: center;
+	font-family: "Proxima Nova", -apple-system, "Helvetica Neue", Helvetica,
+		Roboto, Arial, sans-serif;
 }
 
 .shopping-info__section > p {
-  margin-top: 10px;
-  font-size: 15px;
-  max-width: 300px;
-  color: #999999;
+	margin-top: 10px;
+	font-size: 15px;
+	max-width: 300px;
+	color: #999999;
 }
 
 .shopping-info__section > a {
-  display: block;
-  margin-top: 10px;
-  width: 100%;
-  font-size: 14px;
-  text-decoration: none;
-  &:hover {
-    color: #1259c3;
-  }
-  color: #3483fa;
+	display: block;
+	margin-top: 10px;
+	width: 100%;
+	font-size: 14px;
+	text-decoration: none;
+	&:hover {
+		color: #1259c3;
+	}
+	color: #3483fa;
 }
 
 .shopping-info__divisor {
-  height: 60px;
-  width: 1px;
-  background-color: #999999;
-  margin: 0 30px;
+	height: 60px;
+	width: 1px;
+	background-color: #999999;
+	margin: 0 30px;
+}
+
+.shopping-info__buttons {
+	display: none;
+}
+@media only screen and (max-width: 1024px) {
+	.shopping-info__ctn {
+		justify-content: start;
+		scroll-behavior: smooth;
+	}
+	.shopping-info__divisor {
+		display: none;
+	}
+
+	.shopping-info__section {
+		min-width: 100%;
+		p {
+			width: 100%;
+			max-width: 500px;
+			margin: auto;
+		}
+	}
+	.shopping-info__buttons {
+		position: relative;
+		display: block;
+		top: -40px;
+		z-index: 2;
+		width: 100%;
+		margin-top: -20px;
+		text-align: center;
+
+		a {
+			display: inline-block;
+			width: 10px;
+			height: 10px;
+			border-radius: 50%;
+			border: 1px solid #fff;
+			outline: 1px solid #999999;
+		}
+		a.active {
+			background-color: #3483fa;
+		}
+		a:not(:last-child) {
+			margin-right: 10px;
+		}
+	}
 }

@@ -1,4 +1,9 @@
 .stores-card-gallery {
 	display: flex;
-	padding: 80px 0;
+	padding: 50px 0;
+	margin: 0 10px;
+	overflow: auto;
+	&::-webkit-scrollbar {
+		height: 0;
+	}
 }

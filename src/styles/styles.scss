@@ -1,7 +1,6 @@
 // Base
 @import "./base/base";
 @import "./base/settings";
-@import "./base/nav";
 
 // Experimento
 
@@ -10,6 +9,7 @@
 @import "./pages/root";
 @import "./pages/store";
 @import "./pages/pageNotFound";
+@import "./pages/product";
 
 // UI
 @import "./components/nav/nav";
