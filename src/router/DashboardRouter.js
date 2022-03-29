@@ -20,7 +20,7 @@ export const DashboardRouter = () => {
 			<Routes>
 				<Route path="home" element={<HomePage />} />
 				<Route path="store/*" element={<StorePage />} />
-				<Route path="product" element={<ProductPage />} />
+				<Route path="product/*" element={<ProductPage />} />
 				<Route path="*" element={<PageNotFound />} />
 			</Routes>
 			<Footer />

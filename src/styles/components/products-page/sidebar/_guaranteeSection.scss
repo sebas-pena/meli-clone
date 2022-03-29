@@ -1,0 +1,23 @@
+.product-sidebar__sections.sidebar__guarantee-section {
+	border-radius: 8px 8px 0 0;
+	margin-bottom: -23px;
+	.guarantee-section__title,
+	.guarantee-section__subtitle {
+		font-weight: 400;
+		color: #000000e6;
+	}
+
+	h2 {
+		font-size: 18px;
+		margin-bottom: 28px;
+	}
+	h3 {
+		margin-bottom: 12px;
+		font-size: 16px;
+	}
+	p {
+		margin-bottom: 10px;
+		font-size: 14px;
+		color: #00000086;
+	}
+}
