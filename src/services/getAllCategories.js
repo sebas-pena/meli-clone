@@ -3,6 +3,5 @@ export const getAllCategories = async () => {
     await fetch("https://api.mercadolibre.com/sites/MLU/categories")
   ).json()
 
-  console.log(res)
   return res
 }

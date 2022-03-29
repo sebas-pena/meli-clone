@@ -14,7 +14,8 @@ export const HomePage = () => {
   /* eslint-disable */
 
   const { stores, sliderImages, products, homeCategories } = useGetHomeInfo()
-  let ultimaBusqueda = "autos"
+  let ultimaBusqueda = "auto chevrolet"
+
   return (
     <>
       <div className="home__ctn">
