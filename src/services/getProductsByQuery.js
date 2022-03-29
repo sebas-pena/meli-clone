@@ -1,10 +1,9 @@
-import { categorizar } from "./categorizar"
-import { getProductsByCategoryId } from "./getProductsByCategoryId"
-
 export const getProductsByQuery = async (query) => {
-  const categoryId = await categorizar(query)
-  const res = await getProductsByCategoryId(categoryId)
-  return res.results
-}
+	const res = await (
+		await fetch(
+			`https://api.mercadolibre.com/sites/MLU/search?q=${query}&limit=12`
+		)
+	).json()
 
-// https://api.mercadolibre.com/sites/MLU/search?q=autos
+	return res.results
+}
