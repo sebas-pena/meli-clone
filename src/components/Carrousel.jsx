@@ -1,17 +1,16 @@
 import React, { useEffect, useRef, useState } from "react"
 
-export const Carrousel = ({ images, isLoading }) => {
+export const Carrousel = ({ images }) => {
   const [isAnimationFinished, setIsAnimationFinished] = useState(true)
   let carrouselRef = useRef("")
 
   useEffect(() => {
-    if (!isLoading) {
       const carrousel = carrouselRef.current
       let carrouselImages = carrousel.children
       const lastCarrouselImage = carrouselImages[carrouselImages.length - 1]
       carrousel.insertAdjacentElement("afterbegin", lastCarrouselImage)
-    }
-  }, [isLoading])
+    
+  }, [])
 
   const nextImg = () => {
     if (isAnimationFinished) {
@@ -53,7 +52,7 @@ export const Carrousel = ({ images, isLoading }) => {
   return (
     <div className="carrousel-ctn">
       <div className="carrousel" ref={carrouselRef}>
-        {!isLoading &&
+        {
           images.map((url, index) => (
             <div className="carrousel__img-ctn">
               <img alt="slider-img" src={url} key={index} />

@@ -1,6 +1,5 @@
 import { useEffect } from "react"
 import { HomeGallery } from "../components/cards-galleries/HomeGallery"
-import { useGetProducts } from "../hooks/useGetProducts"
 
 import { ProductDisplay } from "../components/product-page/ProductDisplay"
 import { ProductSection } from "../components/product-page/sidebar/ProductSection"

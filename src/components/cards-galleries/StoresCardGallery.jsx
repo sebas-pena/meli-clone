@@ -1,9 +1,9 @@
 import { StoreCard } from "../cards/StoreCard"
 
-const StoresCardGallery = ({ stores, isLoading }) => {
+const StoresCardGallery = ({ stores }) => {
 	return (
 		<div className="stores-card-gallery">
-			{!isLoading && stores.map((store) => <StoreCard {...store} />)}
+			{stores.map((store) => <StoreCard {...store} />)}
 		</div>
 	)
 }
