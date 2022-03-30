@@ -10,6 +10,9 @@ import { ProductTopLinks } from "../components/product-page/ProductTopLinks"
 import { SellerInfoSection } from "../components/product-page/sidebar/SellerInfoSection"
 import { GuaranteeSection } from "../components/product-page/sidebar/GuaranteeSection"
 import { PaymentMethodsSection } from "../components/product-page/sidebar/PaymentMethodsSection"
+import { Description } from "../components/product-page/product-side/Description"
+import { SellerPosts } from "../components/product-page/product-side/SellerPosts"
+import { QuestionsAndAnswers } from "../components/product-page/product-side/QuestionsAndAnswers"
 export const ProductPage = () => {
 	const products = useGetProducts()
 	useEffect(() => {
@@ -22,6 +25,9 @@ export const ProductPage = () => {
 				<div className="product-screen">
 					<div className="product-info-side">
 						<ProductDisplay />
+						<SellerPosts />
+						<Description />
+						<QuestionsAndAnswers />
 					</div>
 					<sidebar className="product-sidebar">
 						<ProductSection />

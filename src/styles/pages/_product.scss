@@ -1,5 +1,6 @@
 @import "../components/products-page/productDisplay";
 @import "../components/products-page/productTopLinks";
+@import "../components/products-page/product-side/questionsAndAnswers";
 
 // Sidebar sections
 @import "../components/products-page/sidebar/productSection";
@@ -17,7 +18,15 @@
 	margin: 0 auto;
 }
 
+a.product-link {
+	font-size: 14px;
+	text-decoration: none;
+	font-weight: 600;
+	color: #3483fa;
+}
+
 .product-screen {
+	position: relative;
 	display: flex;
 	width: 100%;
 	margin: 0 10px;
@@ -42,11 +51,15 @@
 
 //SCREEN DISPLAY
 .product-info-side {
-	flex-grow: 1;
 	display: flex;
+	flex-direction: column;
+	width: 100%;
+	overflow: hidden;
+	div:not(:first-child) {
+		padding: 0 20px;
+	}
 }
 .product-info-side__section {
-	flex-grow: 1;
 	display: flex;
 }
 
@@ -67,5 +80,12 @@ li.product-image {
 	}
 	&:not(:last-child) {
 		margin-bottom: 10px;
+	}
+}
+
+.product-description {
+	p {
+		font-size: 20px;
+		color: #666;
 	}
 }
