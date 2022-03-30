@@ -1,10 +1,14 @@
+import { useContext } from "react"
+
 import MedalIcon from "../../../assets/svgs/medal-green-icon.svg"
 import MapPinIcon from "../../../assets/svgs/map-pin-icon.svg"
 import AtentionRepIcon from "../../../assets/svgs/reputation-speech-box-icon.svg"
 import TimePositiveIcon from "../../../assets/svgs/reputation-time-positive-icon.svg"
 import { Link } from "react-router-dom"
+import { ProductPageContext } from "../../../context/ProductPageContext"
 
 export const SellerInfoSection = () => {
+	const product = useContext(ProductPageContext)
 	return (
 		<section className="product-sidebar__sections sidebar__seller-info">
 			<h2 className="title">Información sobre el vendedor</h2>

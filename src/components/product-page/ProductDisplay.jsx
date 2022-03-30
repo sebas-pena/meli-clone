@@ -1,70 +1,51 @@
-import React from "react"
+import { useContext, useEffect, useState } from "react"
+import { ProductPageContext } from "../../context/ProductPageContext"
 
 export const ProductDisplay = () => {
+	const product = useContext(ProductPageContext)
+	const [displayPictureId, setDisplayPictureId] = useState("")
+	const [picturesId, setPicturesId] = useState([])
+
+	useEffect(() => {
+		if (product) {
+			let productPictures = product.pictures
+				.slice(0, 6)
+				.map((picture) => picture.id)
+			setDisplayPictureId(productPictures[0])
+			setPicturesId(productPictures)
+		}
+	}, [product])
+
+	const handleDisplayChange = ({ target }) => {
+		console.log(target.getAttribute("position"))
+	}
+
 	return (
-		<section className="product-info-side__section product-display">
-			<ul className="product-images">
-				<li className="product-image">
+		product && (
+			<section className="product-info-side__section product-display">
+				<ul className="product-images">
+					{picturesId.map((pictureId, index) => (
+						<li
+							className="product-image"
+							alt=""
+							key={pictureId}
+							position={index}
+							onMouseEnter={handleDisplayChange}
+						>
+							<img
+								src={`https://http2.mlstatic.com/D_Q_NP_${pictureId}-R.webp`}
+								alt="product"
+							/>
+						</li>
+					))}
+				</ul>
+				<div className="product-image-display">
 					<img
-						src="https://http2.mlstatic.com/D_Q_NP_883583-MLU49386049860_032022-R.webp"
+						src={`https://http2.mlstatic.com/D_NQ_NP_${displayPictureId}-O.webp`}
 						alt="product"
 					/>
-				</li>
-				<li className="product-image">
-					<img
-						src="https://http2.mlstatic.com/D_Q_NP_883583-MLU49386049860_032022-R.webp"
-						alt="product"
-					/>
-				</li>
-				<li className="product-image">
-					<img
-						src="https://http2.mlstatic.com/D_Q_NP_883583-MLU49386049860_032022-R.webp"
-						alt="product"
-					/>
-				</li>
-				<li className="product-image">
-					<img
-						src="https://http2.mlstatic.com/D_Q_NP_883583-MLU49386049860_032022-R.webp"
-						alt="product"
-					/>
-				</li>
-				<li className="product-image">
-					<img
-						src="https://http2.mlstatic.com/D_Q_NP_883583-MLU49386049860_032022-R.webp"
-						alt="product"
-					/>
-				</li>
-				<li className="product-image">
-					<img
-						src="https://http2.mlstatic.com/D_Q_NP_883583-MLU49386049860_032022-R.webp"
-						alt="product"
-					/>
-				</li>
-				<li className="product-image">
-					<img
-						src="https://http2.mlstatic.com/D_Q_NP_883583-MLU49386049860_032022-R.webp"
-						alt="product"
-					/>
-				</li>
-				<li className="product-image">
-					<img
-						src="https://http2.mlstatic.com/D_Q_NP_883583-MLU49386049860_032022-R.webp"
-						alt="product"
-					/>
-				</li>
-				<li className="product-image">
-					<img
-						src="https://http2.mlstatic.com/D_Q_NP_883583-MLU49386049860_032022-R.webp"
-						alt="product"
-					/>
-				</li>
-			</ul>
-			<div className="product-image-display">
-				<img
-					src="https://http2.mlstatic.com/D_NQ_NP_883583-MLU49386049860_032022-O.webp"
-					alt="product"
-				/>
-			</div>
-		</section>
+				</div>
+			</section>
+		)
 	)
 }
