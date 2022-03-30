@@ -10,8 +10,6 @@ export const useGetProductsByQuery = (query) => {
 		async function fetchData() {
 			const res = await getProductsByQuery(query)
 
-			console.log(res.map(({ shipping }) => shipping.free_shipping))
-
 			const products = res.map(
 				({ id, currency_id, price, title, thumbnail_id, shipping }) => ({
 					id,
