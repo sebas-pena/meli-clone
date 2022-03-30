@@ -14,50 +14,46 @@ import { QuestionsAndAnswers } from "../components/product-page/product-side/Que
 import { useGetProductById } from "../hooks/useGetProductById"
 import { useParams } from "react-router-dom"
 import { ProductPageContext } from "../context/ProductPageContext"
+import { useGetProductsBySeller } from "../hooks/useGetProductsBySeller"
 export const ProductPage = () => {
-	const products = useGetProducts()
-	const { productId } = useParams()
-	const { product } = useGetProductById(productId)
-	console.log(product)
-
-	useEffect(() => {
-		document.title = product ? product.title : "Mercado Libre Uruguay"
-	}, [product])
-	return (
-		<ProductPageContext.Provider value={product}>
-			<main className="product-page">
-				<div className="product-page__ctn">
-					<ProductTopLinks />
-					<div className="product-screen">
-						<div className="product-info-side">
-							<ProductDisplay />
-							<div className="description-ctn">
-								<SellerPosts />
-								<Description />
-								<QuestionsAndAnswers />
-							</div>
-						</div>
-						<sidebar className="product-sidebar">
-							<div>
-								<ProductSection />
-								<SellerInfoSection />
-								<GuaranteeSection />
-								<PaymentMethodsSection />
-							</div>
-						</sidebar>
-					</div>
-					{/* Final */}
-					{!products.isLoading ? (
-						<>
-							<HomeGallery products={products.products} />
-							<HomeGallery products={products.products} />
-							<HomeGallery products={products.products} />
-						</>
-					) : (
-						""
-					)}
-				</div>
-			</main>
-		</ProductPageContext.Provider>
-	)
+  const { productId } = useParams()
+  const { product } = useGetProductById(productId)
+  const sellerProducts = useGetProductsBySeller(
+    product ? product.seller_id : ""
+  )
+  console.table(sellerProducts)
+  useEffect(() => {
+    document.title = product ? product.title : "Mercado Libre Uruguay"
+  }, [product])
+  return (
+    <ProductPageContext.Provider value={product}>
+      <main className="product-page">
+        <div className="product-page__ctn">
+          <ProductTopLinks />
+          <div className="product-screen">
+            <div className="product-info-side">
+              <ProductDisplay />
+              <div className="description-ctn">
+                <SellerPosts />
+                <Description />
+                <QuestionsAndAnswers />
+              </div>
+            </div>
+            <sidebar className="product-sidebar">
+              <div>
+                <ProductSection />
+                <SellerInfoSection />
+                <GuaranteeSection />
+                <PaymentMethodsSection />
+              </div>
+            </sidebar>
+          </div>
+          {/* Final */}
+          <HomeGallery />
+          <HomeGallery />
+          <HomeGallery />
+        </div>
+      </main>
+    </ProductPageContext.Provider>
+  )
 }

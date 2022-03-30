@@ -1,8 +1,9 @@
 import { useParams } from "react-router-dom"
-import { useGetProductQuestions } from "../../../hooks/useGetProductQuestions"
 
 export const QuestionsAndAnswers = () => {
   const { productId } = useParams()
+
+  console.log(productId)
   return (
     <div className="questions-answers">
       <h2>Preguntas y respuestas</h2>
