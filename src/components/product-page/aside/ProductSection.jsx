@@ -71,25 +71,6 @@ export const ProductSection = () => {
 						</Link>
 					</div>
 				</div>
-				<div className="product-variants">
-					<p>
-						Color: <span>Azul</span>
-					</p>
-					<ul className="product-variants__list">
-						<li className="product-image">
-							<img
-								src="https://http2.mlstatic.com/D_Q_NP_883583-MLU49386049860_032022-R.webp"
-								alt="product"
-							/>
-						</li>
-						<li className="product-image">
-							<img
-								src="https://http2.mlstatic.com/D_Q_NP_883583-MLU49386049860_032022-R.webp"
-								alt="product"
-							/>
-						</li>
-					</ul>
-				</div>
 				<p className="stock">Stock disponible</p>
 				<div className="stock-selector">
 					<button
