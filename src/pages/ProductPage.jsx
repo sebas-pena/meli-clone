@@ -1,5 +1,5 @@
 import { useEffect } from "react"
-import { HomeGallery } from "../components/cards-galleries/HomeGallery"
+import { ItemsGallery } from "../components/cards-galleries/ItemsGallery"
 
 import { ProductDisplay } from "../components/product-page/product-side/ProductDisplay"
 import { ProductTopLinks } from "../components/product-page/product-side/ProductTopLinks"
@@ -54,9 +54,8 @@ export const ProductPage = () => {
 							</div>
 						</aside>
 					</div>
-					<HomeGallery title="Productos similares" items={similarProducts} />
-					<HomeGallery />
-					<HomeGallery />
+					<ItemsGallery title="Productos similares" items={similarProducts} />
+					<div style={{ height: 30 }} />
 				</div>
 			</main>
 		</ProductPageContext.Provider>

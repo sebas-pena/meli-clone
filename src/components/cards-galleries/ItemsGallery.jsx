@@ -1,6 +1,6 @@
 import { ItemCard } from "../cards/ItemCard"
 
-export const HomeGallery = ({ title, items }) => {
+export const ItemsGallery = ({ title, items }) => {
 	return (
 		<div className="gallery-ctn">
 			<h2 className="gallery-title">{title}</h2>

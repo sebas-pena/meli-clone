@@ -4,7 +4,7 @@ import { useGetProductsByQuery } from "../hooks/useGetProductsByQuery"
 import { homePageData } from "../mocks/homePageData"
 import { Carrousel } from "../components/Carrousel"
 import { CategoriesCardGallery } from "../components/cards-galleries/CategoriesCardGallery"
-import { HomeGallery } from "../components/cards-galleries/HomeGallery"
+import { ItemsGallery } from "../components/cards-galleries/ItemsGallery"
 import { PaymentMethodsInfo } from "../components/PaymentMethodsInfo"
 import StoresCardGallery from "../components/cards-galleries/StoresCardGallery"
 import { ShoppingInfo } from "../components/ShoppingInfo"
@@ -26,11 +26,11 @@ export const HomePage = () => {
 				<Carrousel images={sliderImages} />
 				<div className="home__content">
 					<PaymentMethodsInfo />
-					<HomeGallery
+					<ItemsGallery
 						title="Basado en tu última busqueda"
 						items={lastSearchItems}
 					/>
-					<HomeGallery title="Celulares iphone" items={iphoneItems} />
+					<ItemsGallery title="Celulares iphone" items={iphoneItems} />
 					<img
 						className="home__banner"
 						src={bannerImg}

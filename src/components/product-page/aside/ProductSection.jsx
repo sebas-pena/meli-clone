@@ -14,7 +14,6 @@ export const ProductSection = () => {
 	const [quantity, setQuantity] = useState(1)
 	const [showQuantityOptions, setShowQuantityOptions] = useState(false)
 	const product = useContext(ProductPageContext)
-	console.log(product)
 	return (
 		product && (
 			<section className="product-aside__sections product-aside__product-seciton">
@@ -39,7 +38,7 @@ export const ProductSection = () => {
 					<p className="product-rating__reviews-amount">361 opiniones</p>
 				</div>
 				<div className="product-price__ctn">
-					<p className="product-price">
+					<div className="product-price">
 						<span className="product-price__currency">
 							{product.currency_id === "USD" ? "U$S" : "$"}
 						</span>
@@ -47,10 +46,10 @@ export const ProductSection = () => {
 						<div className="product-price__modal-icon">
 							<img src={QuestionIcon} alt="" />
 						</div>
-					</p>
+					</div>
 					<p className="product-price__installments">
 						<span>En </span>
-						<span>12x $1.578 sin interés</span>
+						<span>12x {(product.price * 42) / 12} sin interés</span>
 					</p>
 					<Link className="product-aside__link" to="payment-methods">
 						ver los medios de pago
