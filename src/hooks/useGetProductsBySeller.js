@@ -12,7 +12,20 @@ export const useGetProductsBySeller = (sellerId) => {
           )
         ).json()
 
-        setProducts(res.results)
+        const products = res.results.map(
+          ({ id, currency_id, price, title, thumbnail_id, shipping }) => ({
+            id,
+            currency: currency_id,
+            price,
+            title,
+            imageUrl: `https://http2.mlstatic.com/D_Q_NP_${thumbnail_id}-AB.webp`,
+            freeShipping: shipping.free_shipping,
+            onSale: 10,
+            maxInstallments: 10,
+          })
+        )
+        
+        setProducts(products)
       }
       getProducts()
     }

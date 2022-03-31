@@ -17,10 +17,12 @@ export const Description = () => {
 	}
 
 	return (
+		description && (
 		<div className="product-description" style={styles}>
 			<h2>Descripción</h2>
 
 			<p dangerouslySetInnerHTML={{ __html: description }}></p>
 		</div>
+		)
 	)
 }

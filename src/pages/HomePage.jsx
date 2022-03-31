@@ -1,4 +1,6 @@
 import { useEffect } from "react"
+
+import {useGetProductsByQuery} from "../hooks/useGetProductsByQuery"
 import { homePageData } from "../mocks/homePageData"
 import { Carrousel } from "../components/Carrousel"
 import { CategoriesCardGallery } from "../components/cards-galleries/CategoriesCardGallery"
@@ -12,6 +14,9 @@ import bannerImg from "../assets/images/banners/banner1.jpg"
 export const HomePage = () => {
 	const { stores, sliderImages, homeCategories } = homePageData
 	let ultimaBusqueda = "samsung s22"
+
+	const lastSearchItems = useGetProductsByQuery(ultimaBusqueda)
+	const iphoneItems = useGetProductsByQuery("televisores")
 	useEffect(() => {
 		document.title = "Mercado Libre Uruguay"
 	}, [])
@@ -24,11 +29,11 @@ export const HomePage = () => {
 					<PaymentMethodsInfo />
 					<HomeGallery
 						title="Basado en tu última busqueda"
-						query={ultimaBusqueda}
+						items={lastSearchItems}
 					/>
 					<HomeGallery
 						title="Celulares iphone"
-						query="Celulares iphone"
+						items={iphoneItems}
 					/>
 					<img
 						className="home__banner"

@@ -11,6 +11,8 @@ export const ItemCard = ({
   maxInstallments,
   freeShipping,
 }) => {
+
+  console.log(imageUrl)
   currency = currency = "USD" ? "U$D" : "$"
 
   let finalPrice = Math.floor((price - (price * onSale) / 100) * 100) / 100

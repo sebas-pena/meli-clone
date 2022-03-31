@@ -1,10 +1,7 @@
 import { useState, useEffect } from "react"
 
 export const useGetProductsByQuery = (query) => {
-  const [products, setProducts] = useState({
-    isLoading: true,
-    products: null,
-  })
+  const [products, setProducts] = useState(null)
   useEffect(() => {
     const getProducts = async () => {
       const res = await (
@@ -25,10 +22,9 @@ export const useGetProductsByQuery = (query) => {
           maxInstallments: 10,
         })
       )
-      setProducts({
-        isLoading: false,
-        products,
-      })
+      setProducts(
+        products
+      )
     }
     getProducts()
   }, [query])

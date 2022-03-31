@@ -19,8 +19,8 @@ export const PaymentMethodsSection = () => {
 				<p>¡Cuotas sin interés con bancos seleccionados!</p>
 				<ul className="payment-methods__logos">
 					{CreditMethodsLogos.map((image) => (
-						<li>
-							<img src={image} alt="" />
+						<li key={image.key}>
+							<img src={image.logo} alt="" />
 						</li>
 					))}
 				</ul>
@@ -29,8 +29,8 @@ export const PaymentMethodsSection = () => {
 				<h3>Tarjetas de débito</h3>
 				<ul className="payment-methods__logos">
 					{DebitMethodsLogos.map((image) => (
-						<li>
-							<img src={image} alt="" />
+						<li key={image.key}>
+							<img src={image.logo} alt="" />
 						</li>
 					))}
 				</ul>
@@ -39,8 +39,8 @@ export const PaymentMethodsSection = () => {
 				<h3>Efectivo en redes de cobranza</h3>
 				<ul className="payment-methods__logos">
 					{CollectionServicesLogos.map((image) => (
-						<li>
-							<img src={image} alt="" />
+						<li key={image.key}>
+							<img src={image.logo} alt="" />
 						</li>
 					))}
 				</ul>
