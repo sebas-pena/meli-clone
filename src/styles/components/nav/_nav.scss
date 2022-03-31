@@ -23,14 +23,6 @@
 	margin-left: auto;
 }
 
-.nav-header__top {
-	align-items: center;
-	padding: 8px 10px;
-}
-.nav-header-bottom {
-	padding: 0 10px;
-}
-
 .nav-header-bottom__mobile,
 .nav-header-top__mobile {
 	display: none;
@@ -177,6 +169,14 @@
 
 .nav-mobile__address-arrow {
 	height: 10px;
+}
+
+.nav-header__top {
+	align-items: center;
+	margin: 8px 10px;
+}
+.nav-header-bottom {
+	margin: 0 10px;
 }
 
 @media only screen and (max-width: 1024px) {

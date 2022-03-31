@@ -104,6 +104,9 @@ body {
 }
 
 @media only screen and (max-width:900px) {
+  .footer__info{
+    padding-left: 20px;
+  }
   .footer__more-info,
   .footer__hidden-section-ctn{
     display: none;

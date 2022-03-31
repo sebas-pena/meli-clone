@@ -1,0 +1,38 @@
+{
+  "files": {
+    "main.css": "/static/css/main.5245dd65.css",
+    "main.js": "/static/js/main.be16d757.js",
+    "static/media/banner1.jpg": "/static/media/banner1.902e243e1cfccd6886d3.jpg",
+    "static/media/proximanova-light.woff2": "/static/media/proximanova-light.0029417e7bf70872da0b.woff2",
+    "static/media/proximanova-regular.woff2": "/static/media/proximanova-regular.83259c64b968610cd01d.woff2",
+    "static/media/proximanova-semibold.woff2": "/static/media/proximanova-semibold.f5be6391b605f918031c.woff2",
+    "static/media/free-shipping.webp": "/static/media/free-shipping.868dea00b73edabb42aa.webp",
+    "static/media/pagenotfound.svg": "/static/media/pagenotfound.1914c3cdd6b802c28ab45353e60d6a08.svg",
+    "static/media/payment.svg": "/static/media/payment.1b344d0ea12041dc3b5f92dc24fff27d.svg",
+    "static/media/payment-agreement.svg": "/static/media/payment-agreement.e1071d3bffe0fc23b0ff9f1bafbf75b2.svg",
+    "static/media/shipping.svg": "/static/media/shipping.e8d19a051a03f5f1357fb46c76cf9020.svg",
+    "static/media/debit-card.svg": "/static/media/debit-card.39db4751866e9fff584a21a2aa41b9ae.svg",
+    "static/media/reputation-time-positive-icon.svg": "/static/media/reputation-time-positive-icon.493a96a7f22e30d024641a3c27c76bf5.svg",
+    "static/media/credit-card.svg": "/static/media/credit-card.42b7ec76b569bc3fd561943824694c05.svg",
+    "static/media/question-icon.svg": "/static/media/question-icon.06b3c186051af2e9d252604ff45b34e5.svg",
+    "static/media/reputation-speech-box-icon.svg": "/static/media/reputation-speech-box-icon.d42e979dbaac57205a4ca05b26ec281d.svg",
+    "static/media/shipping-truck-icon.svg": "/static/media/shipping-truck-icon.8b1586b21d78548505b4effffefedeb1.svg",
+    "static/media/protected-icon.svg": "/static/media/protected-icon.4fd1dc3458d298324cf86113195ec78a.svg",
+    "static/media/award-icon.svg": "/static/media/award-icon.77a3c3aca724e022fc85f024f81bfaef.svg",
+    "index.html": "/index.html",
+    "static/media/card-icon.svg": "/static/media/card-icon.03139bef85eaf9c6842a0f066e7e781d.svg",
+    "static/media/map-pin-icon.svg": "/static/media/map-pin-icon.63a6a71a57c4f14e23e6d3c1b42633ec.svg",
+    "static/media/medal-green-icon.svg": "/static/media/medal-green-icon.75bccbd3d70acf12e971be3ba43aa7d6.svg",
+    "static/media/protected.svg": "/static/media/protected.7b7fa7f40eed11f93a04e2a419fb07d2.svg",
+    "static/media/question connector.svg": "/static/media/question connector.5a5af1cf24880a9ea784f206ab3887af.svg",
+    "static/media/blue-star-full.svg": "/static/media/blue-star-full.1c3d13396966e1e6600669a2b8b1514e.svg",
+    "static/media/view-more.svg": "/static/media/view-more.8fb0b7ee103b42132b036a37655e2559.svg",
+    "static/media/arrow.svg": "/static/media/arrow.afe6a20639a64e36b16b476a4ebdb33e.svg",
+    "main.5245dd65.css.map": "/static/css/main.5245dd65.css.map",
+    "main.be16d757.js.map": "/static/js/main.be16d757.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5245dd65.css",
+    "static/js/main.be16d757.js"
+  ]
+}

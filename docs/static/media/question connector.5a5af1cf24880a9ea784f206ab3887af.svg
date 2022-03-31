@@ -1,0 +1,8 @@
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" class="ui-pdp-icon ui-pdp-questions__questions-list__answer-container__icon" width="12" height="12" viewBox="0 0 12 12">
+	<defs>
+		<symbol id="response">
+			<path fill="#000" fill-opacity=".25" fill-rule="evenodd" d="M0 0h1v11h11v1H0z" />
+		</symbol>
+	</defs>
+	<use href="#response" fill-opacity="0.25" fill="#000000" />
+</svg>
