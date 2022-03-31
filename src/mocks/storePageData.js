@@ -11,46 +11,55 @@ export const storePageData = {
 		"https://http2.mlstatic.com/D_NQ_NP_912689-MLA49062021127_022022-OO.webp",
 	storeCategories: [
 		{
+			id: 10,
 			title: "celulares",
 			imageUrl:
 				"https://http2.mlstatic.com/D_NQ_NP987725-MLA47725966586_102021-B.webp",
 		},
 		{
+			id: 11,
 			title: "electrónica",
 			imageUrl:
 				"https://http2.mlstatic.com/D_NQ_NP879889-MLA44858317219_022021-B.webp",
 		},
 		{
+			id: 12,
 			title: "electrodomésticos",
 			imageUrl:
 				"https://http2.mlstatic.com/D_NQ_NP664884-MLA44858317224_022021-B.webp",
 		},
 		{
+			id: 13,
 			title: "tablets",
 			imageUrl:
 				"https://http2.mlstatic.com/D_NQ_NP652012-MLA48811856218_012022-B.webp",
 		},
 		{
+			id: 14,
 			title: "smartwatches",
 			imageUrl:
 				"https://http2.mlstatic.com/D_NQ_NP996818-MLA48811998806_012022-B.webp",
 		},
 		{
+			id: 15,
 			title: "accesorios",
 			imageUrl:
 				"https://http2.mlstatic.com/D_NQ_NP839221-MLA48812052403_012022-B.webp",
 		},
 		{
+			id: 16,
 			title: "galaxy s22",
 			imageUrl:
 				"https://http2.mlstatic.com/D_NQ_NP959841-MLA49434069086_032022-B.webp",
 		},
 		{
+			id: 17,
 			title: "galaxy s22+",
 			imageUrl:
 				"https://http2.mlstatic.com/D_NQ_NP680719-MLA49434069192_032022-B.webp",
 		},
 		{
+			id: 18,
 			title: "galaxy s22 ultra",
 			imageUrl:
 				"https://http2.mlstatic.com/D_NQ_NP885941-MLA49434009852_032022-B.webp",

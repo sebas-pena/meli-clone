@@ -81,10 +81,15 @@
 		li {
 			width: 100%;
 			margin: 0;
-			padding: 15px 0px 15px 45px;
 			position: relative;
 			border-radius: 0;
 			font-size: 18px;
+			a{
+				display: block;
+				padding:10px 0;
+				padding-left: 20px;
+			
+			}
 		}
 
 		li:not(:last-child) {

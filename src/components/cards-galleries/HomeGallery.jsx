@@ -1,8 +1,6 @@
-import { useGetProductsByQuery } from "../../hooks/useGetProductsByQuery"
 import { ItemCard } from "../cards/ItemCard"
 
 export const HomeGallery = ({ title, items }) => {
-	
 	return (
 		<div className="gallery-ctn">
 			<h2 className="gallery-title">{title}</h2>

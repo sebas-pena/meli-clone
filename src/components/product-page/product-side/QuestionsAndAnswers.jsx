@@ -21,7 +21,6 @@ export const QuestionsAndAnswers = () => {
 				<form>
 					<input
 						type="text"
-						spellCheck="false"
 						autoComplete="off"
 						placeholder="Escribe tu pregunta..."
 					/>
@@ -33,12 +32,20 @@ export const QuestionsAndAnswers = () => {
 				<ul className="questions">
 					{questionsAndAnswers.map(({ question, id, status, answer }) => (
 						<li key={id}>
-							<p>{question}</p>
+							<p className="question">{question}</p>
 							{status === "ANSWERED" ? (
-								<div>
-									<img src={questionConnectorIcon} alt="" />
-									<p>{answer.text}</p>
-									<span>{parseTime(answer.date)}</span>
+								<div className="answer">
+									<img
+										className="answer__connector"
+										src={questionConnectorIcon}
+										alt=""
+									/>
+									<p className="answer__text">
+										{answer.text}{" "}
+										<span className="answer__date">
+											{parseTime(answer.date)}
+										</span>
+									</p>
 								</div>
 							) : (
 								""

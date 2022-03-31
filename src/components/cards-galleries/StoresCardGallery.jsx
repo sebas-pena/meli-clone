@@ -3,7 +3,9 @@ import { StoreCard } from "../cards/StoreCard"
 const StoresCardGallery = ({ stores }) => {
 	return (
 		<div className="stores-card-gallery">
-			{stores.map((store) => <StoreCard {...store} />)}
+			{stores.map((store, index) => (
+				<StoreCard {...store} key={index * 20} />
+			))}
 		</div>
 	)
 }

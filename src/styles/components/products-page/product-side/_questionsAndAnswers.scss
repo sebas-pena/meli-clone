@@ -44,7 +44,9 @@
         border-radius: 6px;
         border: none;
         outline: 1px solid #bfbfbf;
-        color: #bfbfbf;
+        &::placeholder{
+          color: #a9a9a9;
+        }
         &:focus {
           outline: 2px solid #3483fa;
         }
@@ -56,6 +58,61 @@
         color: #e3edfb;
         background-color: #3483fa;
         font-weight: 600;
+        transition: all 300ms;
+        cursor: pointer;
+        &:hover{
+          background-color: #2968c8;
+        }
+      }
+    }
+  }
+  .last-questions{
+
+    .questions > li {
+      margin-bottom: 30px;
+      padding-right: 20px;
+
+      .question{
+        padding-right: 50px;
+        &:hover{
+          &::after{
+            content: "Denunciar";
+            margin-left: 10px;
+            font-size: 14px;
+            color: #3483fa;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+
+    .questions > li >div{
+      display :flex;
+      margin-top: 10px;
+
+      .answer__connector{
+        align-self: baseline;
+        padding: 0 10px;
+      }
+
+      .answer__text{
+        font-size: 16px;
+        color: #0000008c;
+
+        .answer__date{
+          display: block;
+          padding-right: 50px;
+          font-size: 14px;
+        }
+
+        &:hover{
+          .answer__date::after{
+            content: "Denunciar";
+            margin-left: 10px;
+            color: #3483fa;
+            cursor: pointer;
+          }
+        }
       }
     }
   }

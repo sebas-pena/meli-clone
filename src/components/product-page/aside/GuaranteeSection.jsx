@@ -5,7 +5,7 @@ import { ProductPageContext } from "../../../context/ProductPageContext"
 export const GuaranteeSection = () => {
 	const product = useContext(ProductPageContext)
 	return (
-		<section className="product-sidebar__sections sidebar__guarantee-section">
+		<section className="product-aside__sections aside__guarantee-section">
 			<h2 className="guarantee-section__title">Garantía</h2>
 			<h3 className="guarantee-section__subtitle">
 				Compra Protegida con Mercado Pago
@@ -21,7 +21,7 @@ export const GuaranteeSection = () => {
 			) : (
 				""
 			)}
-			<Link className="product-sidebar__link" to="">
+			<Link className="product-aside__link" to="">
 				Conocer más sobre garantía
 			</Link>
 		</section>

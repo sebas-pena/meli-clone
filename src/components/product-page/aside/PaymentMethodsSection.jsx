@@ -8,7 +8,7 @@ import {
 import CardIcon from "../../../assets/svgs/card-icon.svg"
 export const PaymentMethodsSection = () => {
 	return (
-		<section className="product-sidebar__sections payment-methods-section">
+		<section className="product-aside__sections payment-methods-section">
 			<h2>Medios de pago</h2>
 			<button className="green-button">
 				<img src={CardIcon} alt="" />
@@ -45,7 +45,7 @@ export const PaymentMethodsSection = () => {
 					))}
 				</ul>
 			</div>
-			<Link className="product-sidebar__link" to="">
+			<Link className="product-aside__link" to="">
 				Conoce otros medios de pago
 			</Link>
 		</section>

@@ -17,12 +17,12 @@ export const ProductSection = () => {
 	console.log(product)
 	return (
 		product && (
-			<section className="product-sidebar__sections product-sidebar__product-seciton">
+			<section className="product-aside__sections product-aside__product-seciton">
 				<p className="product__amount">
-					{product.condition == "new" ? "Nuevo " : "Usado "}|
+					{product.condition === "new" ? "Nuevo " : "Usado "}|
 					{product.sold_quantity > 1
 						? ` ${product.sold_quantity} vendidos`
-						: product.sold_quantity == 1
+						: product.sold_quantity === 1
 						? " 1 vendido"
 						: ""}
 				</p>
@@ -41,7 +41,7 @@ export const ProductSection = () => {
 				<div className="product-price__ctn">
 					<p className="product-price">
 						<span className="product-price__currency">
-							{(product.currency_id = "USD" ? "U$S" : "$")}
+							{product.currency_id === "USD" ? "U$S" : "$"}
 						</span>
 						<span className="product-price__price">{product.price}</span>
 						<div className="product-price__modal-icon">
@@ -52,7 +52,7 @@ export const ProductSection = () => {
 						<span>En </span>
 						<span>12x $1.578 sin interés</span>
 					</p>
-					<Link className="product-sidebar__link" to="payment-methods">
+					<Link className="product-aside__link" to="payment-methods">
 						ver los medios de pago
 					</Link>
 				</div>
@@ -67,7 +67,7 @@ export const ProductSection = () => {
 							Comprando dentro de las próximas
 							<span className="highlight-orange"> 40min</span>
 						</span>
-						<Link className="product-sidebar__link" to="shipping-methods">
+						<Link className="product-aside__link" to="shipping-methods">
 							ver más formas de entrega
 						</Link>
 					</div>

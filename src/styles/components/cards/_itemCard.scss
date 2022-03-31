@@ -8,8 +8,9 @@
 	border-radius: 0 0 5px 5px;
 	text-decoration: none;
 	cursor: pointer;
+	box-shadow: 0 1px 1px 1px #0000001c;
 	&:hover {
-		box-shadow: 0px 6px 20px -1px #00000030;
+		box-shadow: 0px 7px 20px -1px #00000030, 0 1px 1px 1px #0000001c;
 	}
 }
 
@@ -94,14 +95,73 @@
 }
 .item-title {
 	display: none;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 2;
+	width: 100%;
+	text-overflow: ellipsis;
+	overflow: hidden;
 	font-size: 14px;
 	color: #666;
 }
 
 .item-card:hover > .item-card-description > .item-price-without-discount,
 .item-card:hover > .item-card-description > .item-title {
-	display: block;
+	display: -webkit-box;
 }
 .item-card:hover > .item-card-img > .item-heart-icon {
 	display: flex;
+}
+
+
+@media only screen and (max-width:600px) {
+	.item-card{
+		display: flex;
+		width: 100%;
+		padding: 5px;
+		margin: 0 !important;
+		border-radius: 0;
+		border-top: 1px solid rgba(102, 102, 102, 0.231);
+		
+		min-height: auto;
+		&:hover{
+			box-shadow: none !important;
+		}
+		.item-heart-icon{
+			display: none !important; 
+		}
+		.item-price-without-discount{
+			display: none !important
+		}
+		.item-card-img{
+			display: block;
+			width: auto;
+			height: 115px;
+			margin-right: 20px;
+			border: none;
+		}
+		.item-card-description{
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			max-width: 300px;
+			height: 115px;
+			padding: 0;
+			.item-title{
+				display: block;
+				order: -1;
+			}
+
+			.item-price{
+				font-size: 20px;
+			}
+			.item-installments{
+				color: #00a650;
+			}
+			.item-free-shipping,
+			.item-installments{
+				margin: 0;
+			}
+		}
+	}
+	
 }

@@ -1,12 +1,14 @@
-@import "../components/products-page/productDisplay";
 @import "../components/products-page/productTopLinks";
+@import "../components/products-page/product-side/productDisplay";
 @import "../components/products-page/product-side/questionsAndAnswers";
+@import "../components/products-page/product-side/description";
 
-// Sidebar sections
-@import "../components/products-page/sidebar/productSection";
-@import "../components/products-page/sidebar/sellerInfoSection";
-@import "../components/products-page/sidebar/guaranteeSection";
-@import "../components/products-page/sidebar/paymentMethodsSection";
+// aside sections
+
+@import "../components/products-page/aside/productSection";
+@import "../components/products-page/aside/sellerInfoSection";
+@import "../components/products-page/aside/guaranteeSection";
+@import "../components/products-page/aside/paymentMethodsSection";
 
 .product-page {
   background-color: #ededed;
@@ -37,12 +39,12 @@ a.product-link {
   box-shadow: 0 1px 2px 0 #00000040;
 }
 
-.product-screen > sidebar {
+.product-screen > aside {
   max-width: 400px;
 }
 
-//SIDEBAR SECTIONS
-.product-sidebar__sections {
+//aside SECTIONS
+.product-aside__sections {
   margin-top: 22px;
   padding: 20px 15px;
   border: 1px solid #0000001a;
@@ -55,13 +57,7 @@ a.product-link {
   flex-direction: column;
   width: 100%;
   overflow: hidden;
-  .description-ctn {
-    padding: 0 40px;
-    h2 {
-      font-size: 24px;
-      color: #000000e6;
-    }
-  }
+ 
 }
 .product-info-side__section {
   display: flex;
@@ -92,4 +88,10 @@ li.product-image {
     font-size: 20px;
     color: #666;
   }
+}
+
+
+.seller-posts{
+  margin: 0 45px;
+
 }

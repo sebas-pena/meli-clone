@@ -1,6 +1,6 @@
 import { useEffect } from "react"
 
-import {useGetProductsByQuery} from "../hooks/useGetProductsByQuery"
+import { useGetProductsByQuery } from "../hooks/useGetProductsByQuery"
 import { homePageData } from "../mocks/homePageData"
 import { Carrousel } from "../components/Carrousel"
 import { CategoriesCardGallery } from "../components/cards-galleries/CategoriesCardGallery"
@@ -16,11 +16,10 @@ export const HomePage = () => {
 	let ultimaBusqueda = "samsung s22"
 
 	const lastSearchItems = useGetProductsByQuery(ultimaBusqueda)
-	const iphoneItems = useGetProductsByQuery("televisores")
+	const iphoneItems = useGetProductsByQuery("iphone")
 	useEffect(() => {
 		document.title = "Mercado Libre Uruguay"
 	}, [])
-		console.log(stores)
 	return (
 		<>
 			<div className="home__ctn">
@@ -31,10 +30,7 @@ export const HomePage = () => {
 						title="Basado en tu última busqueda"
 						items={lastSearchItems}
 					/>
-					<HomeGallery
-						title="Celulares iphone"
-						items={iphoneItems}
-					/>
+					<HomeGallery title="Celulares iphone" items={iphoneItems} />
 					<img
 						className="home__banner"
 						src={bannerImg}
